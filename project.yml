@@ -1,0 +1,57 @@
+name: PracticeRoom
+options:
+  bundleIdPrefix: com.yufan
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""          # <- put your Apple Developer Team ID here
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_STRICT_CONCURRENCY: minimal
+
+targets:
+  PracticeRoom:
+    type: application
+    platform: iOS
+    # Generate a shared scheme so `xcodebuild -scheme` works on CI without opening Xcode first.
+    scheme: {}
+    sources:
+      - path: Sources
+      - path: Resources
+        buildPhase: resources
+    info:
+      path: Supporting/Info.plist
+      properties:
+        CFBundleDisplayName: Practice Room
+        CFBundleShortVersionString: "0.1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UIRequiredDeviceCapabilities: [arm64]
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        NSCameraUsageDescription: >-
+          Practice Room uses the camera so you can record yourself dancing and compare
+          your run against the reference choreography.
+        NSMicrophoneUsageDescription: >-
+          Practice Room records audio with your practice takes so you can hear your own
+          counts and timing. You can turn the microphone off at any time.
+        NSPhotoLibraryAddUsageDescription: >-
+          Practice Room saves your practice takes to your photo library when you ask it to.
+        NSPhotoLibraryUsageDescription: >-
+          Practice Room imports dance videos you already own from your photo library so you
+          can mirror, slow down and loop them.
+        NSAppleMusicUsageDescription: >-
+          Practice Room plays songs from your Apple Music subscription so you can practice
+          with the real track. Apple Music audio is never recorded or exported.
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yufan.practiceroom
+        TARGETED_DEVICE_FAMILY: "1,2"

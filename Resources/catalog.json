@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "note": "Seed catalog. Titles, artists and years are factual. Difficulty ratings are editorial first guesses and are user-overridable in the app. No YouTube video IDs are hardcoded on purpose: IDs rot, official uploads get replaced, and guessing them ships a broken app. Each entry carries the search intent instead, and VideoResolver finds + caches the current best match.",
+  "tutorialChannelBoosts": [
+    "Ellen and Brian",
+    "Lily K",
+    "1MILLION Dance Studio",
+    "Mylee Dance"
+  ],
+  "globalTutorialExcludeTerms": [
+    "reaction",
+    "react",
+    "fancam",
+    "review",
+    "lyrics",
+    "compilation",
+    "ranking",
+    "ai cover",
+    "sped up",
+    "nightcore"
+  ],
+  "globalPracticeExcludeTerms": [
+    "tutorial",
+    "cover",
+    "reaction",
+    "lyrics",
+    "teaser",
+    "fancam",
+    "slowed",
+    "sped up",
+    "challenge",
+    "reversed"
+  ],
+  "choreographies": [
+    { "id": "newjeans-ditto", "title": "Ditto", "artist": "NewJeans", "year": 2022, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "smooth", "groove"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+    { "id": "newjeans-hype-boy", "title": "Hype Boy", "artist": "NewJeans", "year": 2022, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "beginner friendly", "viral"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+    { "id": "newjeans-omg", "title": "OMG", "artist": "NewJeans", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "groove"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+    { "id": "newjeans-super-shy", "title": "Super Shy", "artist": "NewJeans", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "fast footwork", "stamina"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+    { "id": "newjeans-how-sweet", "title": "How Sweet", "artist": "NewJeans", "year": 2024, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "retro"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+    { "id": "newjeans-cool-with-you", "title": "Cool With You", "artist": "NewJeans", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "lyrical"], "officialChannels": ["HYBE LABELS", "NewJeans"] },
+
+    { "id": "lesserafim-antifragile", "title": "ANTIFRAGILE", "artist": "LE SSERAFIM", "year": 2022, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "sharp", "killing part"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+    { "id": "lesserafim-unforgiven", "title": "UNFORGIVEN", "artist": "LE SSERAFIM", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "western", "formation"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+    { "id": "lesserafim-perfect-night", "title": "Perfect Night", "artist": "LE SSERAFIM", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "viral", "challenge"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+    { "id": "lesserafim-easy", "title": "EASY", "artist": "LE SSERAFIM", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "floor work", "control"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+    { "id": "lesserafim-smart", "title": "Smart", "artist": "LE SSERAFIM", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "sharp", "challenge"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+    { "id": "lesserafim-crazy", "title": "CRAZY", "artist": "LE SSERAFIM", "year": 2024, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "high tempo", "stamina"], "officialChannels": ["HYBE LABELS", "LE SSERAFIM"] },
+
+    { "id": "aespa-next-level", "title": "Next Level", "artist": "aespa", "year": 2021, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "iconic", "isolations"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-savage", "title": "Savage", "artist": "aespa", "year": 2021, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "sharp"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-spicy", "title": "Spicy", "artist": "aespa", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "groove"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-drama", "title": "Drama", "artist": "aespa", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "heavy", "control"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-supernova", "title": "Supernova", "artist": "aespa", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "iconic", "arms"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-armageddon", "title": "Armageddon", "artist": "aespa", "year": 2024, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "fast", "stamina"], "officialChannels": ["SMTOWN", "aespa"] },
+    { "id": "aespa-whiplash", "title": "Whiplash", "artist": "aespa", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "groove", "viral"], "officialChannels": ["SMTOWN", "aespa"] },
+
+    { "id": "ive-love-dive", "title": "LOVE DIVE", "artist": "IVE", "year": 2022, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "elegant"], "officialChannels": ["STARSHIP ENTERTAINMENT", "IVE"] },
+    { "id": "ive-after-like", "title": "After LIKE", "artist": "IVE", "year": 2022, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "retro", "hips"], "officialChannels": ["STARSHIP ENTERTAINMENT", "IVE"] },
+    { "id": "ive-i-am", "title": "I AM", "artist": "IVE", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "uplifting"], "officialChannels": ["STARSHIP ENTERTAINMENT", "IVE"] },
+    { "id": "ive-baddie", "title": "Baddie", "artist": "IVE", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "swag", "groove"], "officialChannels": ["STARSHIP ENTERTAINMENT", "IVE"] },
+    { "id": "ive-heya", "title": "HEYA", "artist": "IVE", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "traditional", "fan"], "officialChannels": ["STARSHIP ENTERTAINMENT", "IVE"] },
+
+    { "id": "gidle-tomboy", "title": "TOMBOY", "artist": "(G)I-DLE", "year": 2022, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "rock", "attitude"], "officialChannels": ["(G)I-DLE", "CUBE Entertainment"] },
+    { "id": "gidle-queencard", "title": "Queencard", "artist": "(G)I-DLE", "year": 2023, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "viral", "beginner friendly"], "officialChannels": ["(G)I-DLE", "CUBE Entertainment"] },
+
+    { "id": "blackpink-how-you-like-that", "title": "How You Like That", "artist": "BLACKPINK", "year": 2020, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "iconic", "power"], "officialChannels": ["BLACKPINK"] },
+    { "id": "blackpink-pink-venom", "title": "Pink Venom", "artist": "BLACKPINK", "year": 2022, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "swag"], "officialChannels": ["BLACKPINK"] },
+    { "id": "blackpink-shut-down", "title": "Shut Down", "artist": "BLACKPINK", "year": 2022, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "control"], "officialChannels": ["BLACKPINK"] },
+    { "id": "blackpink-kill-this-love", "title": "Kill This Love", "artist": "BLACKPINK", "year": 2019, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "power", "stamina"], "officialChannels": ["BLACKPINK"] },
+    { "id": "blackpink-ddu-du-ddu-du", "title": "DDU-DU DDU-DU", "artist": "BLACKPINK", "year": 2018, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "iconic"], "officialChannels": ["BLACKPINK"] },
+    { "id": "blackpink-jump", "title": "JUMP", "artist": "BLACKPINK", "year": 2025, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "high energy"], "officialChannels": ["BLACKPINK"] },
+
+    { "id": "twice-tt", "title": "TT", "artist": "TWICE", "year": 2016, "difficulty": 2, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "beginner friendly", "point choreo"], "officialChannels": ["JYP Entertainment", "TWICE"] },
+    { "id": "twice-fancy", "title": "FANCY", "artist": "TWICE", "year": 2019, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "classic"], "officialChannels": ["JYP Entertainment", "TWICE"] },
+    { "id": "twice-i-cant-stop-me", "title": "I CAN'T STOP ME", "artist": "TWICE", "year": 2020, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "retro", "formation"], "officialChannels": ["JYP Entertainment", "TWICE"] },
+    { "id": "twice-set-me-free", "title": "SET ME FREE", "artist": "TWICE", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "sharp"], "officialChannels": ["JYP Entertainment", "TWICE"] },
+    { "id": "twice-one-spark", "title": "ONE SPARK", "artist": "TWICE", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "fast"], "officialChannels": ["JYP Entertainment", "TWICE"] },
+
+    { "id": "itzy-dalla-dalla", "title": "DALLA DALLA", "artist": "ITZY", "year": 2019, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "power", "iconic"], "officialChannels": ["JYP Entertainment", "ITZY"] },
+    { "id": "itzy-wannabe", "title": "WANNABE", "artist": "ITZY", "year": 2020, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "power", "stamina"], "officialChannels": ["JYP Entertainment", "ITZY"] },
+
+    { "id": "straykids-gods-menu", "title": "God's Menu", "artist": "Stray Kids", "year": 2020, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["4th gen", "boy group", "hard hitting", "stamina"], "officialChannels": ["JYP Entertainment", "Stray Kids"] },
+    { "id": "straykids-lalalala", "title": "LALALALA", "artist": "Stray Kids", "year": 2023, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "boy group", "rock", "power"], "officialChannels": ["JYP Entertainment", "Stray Kids"] },
+    { "id": "straykids-chk-chk-boom", "title": "Chk Chk Boom", "artist": "Stray Kids", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "boy group", "groove"], "officialChannels": ["JYP Entertainment", "Stray Kids"] },
+
+    { "id": "seventeen-super", "title": "Super", "artist": "SEVENTEEN", "year": 2023, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["3rd gen", "boy group", "formation", "13 member"], "officialChannels": ["HYBE LABELS", "SEVENTEEN"] },
+    { "id": "seventeen-maestro", "title": "MAESTRO", "artist": "SEVENTEEN", "year": 2024, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["3rd gen", "boy group", "formation", "sharp"], "officialChannels": ["HYBE LABELS", "SEVENTEEN"] },
+
+    { "id": "bts-boy-with-luv", "title": "Boy With Luv", "artist": "BTS", "year": 2019, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "boy group", "bright", "classic"], "officialChannels": ["HYBE LABELS", "BANGTANTV"] },
+    { "id": "bts-dynamite", "title": "Dynamite", "artist": "BTS", "year": 2020, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "boy group", "disco", "beginner friendly"], "officialChannels": ["HYBE LABELS", "BANGTANTV"] },
+    { "id": "bts-butter", "title": "Butter", "artist": "BTS", "year": 2021, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["3rd gen", "boy group", "groove"], "officialChannels": ["HYBE LABELS", "BANGTANTV"] },
+    { "id": "jungkook-standing-next-to-you", "title": "Standing Next to You", "artist": "Jung Kook", "year": 2023, "difficulty": 5, "referenceKind": "dancePractice", "tags": ["soloist", "funk", "footwork", "stamina"], "officialChannels": ["HYBE LABELS", "BANGTANTV"] },
+
+    { "id": "redvelvet-psycho", "title": "Psycho", "artist": "Red Velvet", "year": 2019, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "elegant", "control"], "officialChannels": ["SMTOWN", "Red Velvet"] },
+    { "id": "redvelvet-feel-my-rhythm", "title": "Feel My Rhythm", "artist": "Red Velvet", "year": 2022, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["3rd gen", "girl group", "classical", "formation"], "officialChannels": ["SMTOWN", "Red Velvet"] },
+    { "id": "nctdream-hot-sauce", "title": "Hot Sauce", "artist": "NCT DREAM", "year": 2021, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["4th gen", "boy group", "hip hop"], "officialChannels": ["SMTOWN", "NCT DREAM"] },
+    { "id": "snsd-gee", "title": "Gee", "artist": "Girls' Generation", "year": 2009, "difficulty": 2, "referenceKind": "dancePractice", "tags": ["2nd gen", "girl group", "classic", "beginner friendly"], "officialChannels": ["SMTOWN", "Girls' Generation"] },
+
+    { "id": "illit-magnetic", "title": "Magnetic", "artist": "ILLIT", "year": 2024, "difficulty": 2, "referenceKind": "dancePractice", "tags": ["5th gen", "girl group", "beginner friendly", "viral"], "officialChannels": ["HYBE LABELS", "ILLIT"] },
+    { "id": "babymonster-sheesh", "title": "SHEESH", "artist": "BABYMONSTER", "year": 2024, "difficulty": 4, "referenceKind": "dancePractice", "tags": ["5th gen", "girl group", "swag", "power"], "officialChannels": ["BABYMONSTER", "YG ENTERTAINMENT"] },
+    { "id": "stayc-teddy-bear", "title": "Teddy Bear", "artist": "STAYC", "year": 2023, "difficulty": 2, "referenceKind": "dancePractice", "tags": ["4th gen", "girl group", "cute", "beginner friendly"], "officialChannels": ["STAYC", "HIGH UP ENTERTAINMENT"] },
+    { "id": "jennie-mantra", "title": "Mantra", "artist": "JENNIE", "year": 2024, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["soloist", "swag", "groove"], "officialChannels": ["JENNIE", "OA"] },
+    { "id": "rose-apt", "title": "APT.", "artist": "ROSÉ & Bruno Mars", "year": 2024, "difficulty": 2, "referenceKind": "musicVideo", "tags": ["soloist", "viral", "beginner friendly", "game"], "officialChannels": ["ROSÉ", "Bruno Mars"] },
+    { "id": "katseye-gnarly", "title": "Gnarly", "artist": "KATSEYE", "year": 2025, "difficulty": 3, "referenceKind": "dancePractice", "tags": ["5th gen", "girl group", "attitude", "viral"], "officialChannels": ["HYBE LABELS", "KATSEYE"] },
+
+    { "id": "huntrix-golden", "title": "Golden", "artist": "HUNTR/X", "year": 2025, "difficulty": 3, "referenceKind": "performance", "tags": ["kpop demon hunters", "ost", "viral", "beginner friendly"], "officialChannels": ["Netflix", "Sony Pictures Animation"] },
+    { "id": "huntrix-how-its-done", "title": "How It's Done", "artist": "HUNTR/X", "year": 2025, "difficulty": 4, "referenceKind": "performance", "tags": ["kpop demon hunters", "ost", "power"], "officialChannels": ["Netflix", "Sony Pictures Animation"] },
+    { "id": "sajaboys-soda-pop", "title": "Soda Pop", "artist": "Saja Boys", "year": 2025, "difficulty": 2, "referenceKind": "performance", "tags": ["kpop demon hunters", "ost", "cute", "beginner friendly"], "officialChannels": ["Netflix", "Sony Pictures Animation"] }
+  ]
+}
