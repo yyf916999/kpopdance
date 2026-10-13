@@ -104,7 +104,8 @@ final class ChoreographyDetailModel: ObservableObject {
         referencePhase = .loading
         do {
             let id = try await ContentService.shared.resolveReferenceVideo(
-                for: choreography, region: store.settings.tutorialRegionCode
+                for: choreography, region: store.settings.tutorialRegionCode,
+                ignoringCatalogID: forceRefresh
             )
             referenceVideoID = id
             store.storeResolvedPracticeVideo(id, for: choreography.id)

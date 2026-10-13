@@ -177,8 +177,10 @@ final class AppStore: ObservableObject {
 
     // MARK: - Resolved reference videos
 
+    /// A pasted link or a re-resolve beats the catalog's ID, so a shipped ID that later rots can
+    /// always be replaced from the app.
     func resolvedPracticeVideoID(for choreography: Choreography) -> String? {
-        choreography.knownPracticeVideoID ?? progress(for: choreography.id).resolvedPracticeVideoID
+        progress(for: choreography.id).resolvedPracticeVideoID ?? choreography.knownPracticeVideoID
     }
 
     func storeResolvedPracticeVideo(_ videoID: String, for id: String) {

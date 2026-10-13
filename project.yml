@@ -51,7 +51,10 @@ targets:
           Practice Room plays songs from your Apple Music subscription so you can practice
           with the real track. Apple Music audio is never recorded or exported.
         ITSAppUsesNonExemptEncryption: false
+        # Filled from the YOUTUBE_API_KEY build setting (a GitHub secret in CI). Empty = no built-in key.
+        YouTubeAPIKey: $(YOUTUBE_API_KEY)
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yufan.practiceroom
         TARGETED_DEVICE_FAMILY: "1,2"
+        YOUTUBE_API_KEY: ""

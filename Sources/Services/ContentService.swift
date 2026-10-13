@@ -7,9 +7,24 @@ final class ContentService {
     static let shared = ContentService()
     private init() {}
 
+    /// The key the user pasted in Settings wins; otherwise fall back to the one baked in at build
+    /// time, so a fresh install finds videos with no setup on the phone.
     var apiKey: String? {
-        get { KeychainStore.get(KeychainStore.Account.youTubeAPIKey) }
+        get { userAPIKey ?? bundledAPIKey }
         set { KeychainStore.set(newValue, for: KeychainStore.Account.youTubeAPIKey) }
+    }
+
+    var userAPIKey: String? {
+        let key = KeychainStore.get(KeychainStore.Account.youTubeAPIKey)
+        return (key ?? "").isEmpty ? nil : key
+    }
+
+    /// Injected by CI from the `YOUTUBE_API_KEY` secret via the `YouTubeAPIKey` Info.plist entry.
+    /// Empty for local builds without the setting.
+    var bundledAPIKey: String? {
+        let key = (Bundle.main.object(forInfoDictionaryKey: "YouTubeAPIKey") as? String)?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        return (key ?? "").isEmpty ? nil : key
     }
 
     var hasAPIKey: Bool {
@@ -25,8 +40,10 @@ final class ContentService {
 
     /// Finds the official dance practice (or performance/MV, per the entry) for a choreography.
     /// Returns the video ID; the caller caches it so this costs one search per routine, ever.
-    func resolveReferenceVideo(for choreography: Choreography, region: String) async throws -> String {
-        if let known = choreography.knownPracticeVideoID { return known }
+    /// `ignoringCatalogID` is for "re-resolve": the user is telling us the shipped ID is wrong.
+    func resolveReferenceVideo(for choreography: Choreography, region: String,
+                               ignoringCatalogID: Bool = false) async throws -> String {
+        if !ignoringCatalogID, let known = choreography.knownPracticeVideoID { return known }
         let client = api(region: region)
         let hits = try await client.search(query: choreography.practiceSearch.query, maxResults: 20)
         guard !hits.isEmpty else { throw YouTubeAPIError.noResults }

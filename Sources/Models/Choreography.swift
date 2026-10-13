@@ -48,9 +48,9 @@ enum ReferenceKind: String, Codable, Hashable {
     }
 }
 
-/// We deliberately do not ship hardcoded YouTube video IDs. IDs rot, get re-uploaded, and
-/// guessing them produces a broken app. Instead each entry ships the search intent, and the
-/// resolver finds the current best match once and caches it.
+/// We never ship guessed YouTube video IDs. IDs rot, get re-uploaded, and guessing them produces
+/// a broken app. Each entry ships the search intent, and the resolver finds the current best match
+/// once and caches it; only IDs verified against the official channel are pinned in the catalog.
 struct VideoSearchSeed: Codable, Hashable {
     var query: String
     /// Channel names we trust for this kind of result, used as a ranking boost only.
@@ -70,8 +70,8 @@ struct Choreography: Identifiable, Codable, Hashable {
     var practiceSearch: VideoSearchSeed
     var tutorialSearch: VideoSearchSeed
 
-    /// Optional: if you happen to know the canonical dance practice ID, put it here and the
-    /// resolver will skip the network round trip. Seed data leaves this nil on purpose.
+    /// Optional: the canonical reference ID, checked against the official channel. When set the
+    /// video plays with no API key and no search. Left nil wherever it could not be verified.
     var knownPracticeVideoID: String?
 
     var displaySubtitle: String { "\(artist) · \(String(year))" }

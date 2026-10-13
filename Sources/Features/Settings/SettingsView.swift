@@ -6,6 +6,7 @@ struct SettingsView: View {
 
     @State private var apiKeyDraft = ""
     @State private var hasKey = ContentService.shared.hasAPIKey
+    @State private var hasUserKey = ContentService.shared.userAPIKey != nil
     @State private var keyStatus: String?
     @State private var checkingKey = false
     @State private var confirmClearCache = false
@@ -38,13 +39,17 @@ struct SettingsView: View {
         Section {
             if hasKey {
                 HStack {
-                    Label("API key saved", systemImage: "checkmark.seal.fill")
+                    Label(hasUserKey ? "API key saved" : "Built-in API key",
+                          systemImage: "checkmark.seal.fill")
                         .foregroundColor(Palette.mint)
                     Spacer()
-                    Button("Remove", role: .destructive) {
-                        ContentService.shared.apiKey = nil
-                        hasKey = false
-                        keyStatus = nil
+                    if hasUserKey {
+                        Button("Remove", role: .destructive) {
+                            ContentService.shared.apiKey = nil
+                            hasKey = ContentService.shared.hasAPIKey
+                            hasUserKey = false
+                            keyStatus = nil
+                        }
                     }
                 }
                 Button {
@@ -65,6 +70,7 @@ struct SettingsView: View {
                     ContentService.shared.apiKey = trimmed
                     apiKeyDraft = ""
                     hasKey = ContentService.shared.hasAPIKey
+                    hasUserKey = ContentService.shared.userAPIKey != nil
                     Task { await checkKey() }
                 }
                 .disabled(apiKeyDraft.trimmingCharacters(in: .whitespaces).isEmpty)
@@ -77,7 +83,7 @@ struct SettingsView: View {
         } header: {
             Text("YouTube")
         } footer: {
-            Text("Optional. With a free key from Google Cloud Console the app finds reference videos and ranks tutorials for you. Without one, paste links yourself. The key is stored in the Keychain and only used for read-only metadata lookups.")
+            Text("Optional. With a free key from Google Cloud Console the app finds reference videos and ranks tutorials for you. Without one, paste links yourself. A key you paste here is stored in the Keychain, replaces any built-in key, and is only used for read-only metadata lookups.")
         }
     }
 
